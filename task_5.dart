@@ -1,14 +1,12 @@
 import 'dart:io';
 
 void main() {
-  print(
-    'please enter array on integer numbers separate the numbers by space :',
-  );
-  String input = stdin.readLineSync()!;
-  List<String> temp = input.split(' ');
+  print('enter numbers of int array :');
   List<int> num = [];
-  for (int i = 0; i < temp.length; i++) {
-    num.add(int.parse(temp[i]));
+  while (true) {
+    String input = stdin.readLineSync()!;
+    if (input.isEmpty) break;
+    num.add(int.parse(input));
   }
   print(bubbleSort(num));
 }
