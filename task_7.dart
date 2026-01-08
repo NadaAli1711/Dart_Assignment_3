@@ -1,6 +1,14 @@
+import 'dart:io';
+
 void main() {
-  List<int> array = [100, 20, 0, 150, 3, 9];
-  print(selectionSort(array));
+  List<int> num = [];
+  print("Enter size of the array: ");
+  int size = int.parse(stdin.readLineSync()!);
+  print("Enter array elements: ");
+  for (int i = 0; i < size; i++) {
+    num.add(int.parse(stdin.readLineSync()!));
+  }
+  print(selectionSort(num));
 }
 
 List<int> selectionSort(List<int> array) {
